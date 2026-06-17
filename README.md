@@ -2,10 +2,9 @@
   <h1>🥊 Análise Exploratória e Evolução Tática do UFC</h1>
   <p><i>Projeto acadêmico analisando como o maior evento de MMA do mundo evoluiu de uma "briga de estilos puros" para um esporte híbrido de altíssima performance.</i></p>
 
-  <!-- Badges Tecnológicos -->
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
-  <img src="https://img.shields.io/badge/Seaborn-4C8CBF?style=for-the-badge&logo=python&logoColor=white" alt="Seaborn"/>
+  <img src="[https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)" alt="Python"/>
+  <img src="[https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white](https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white)" alt="Pandas"/>
+  <img src="[https://img.shields.io/badge/Seaborn-4C8CBF?style=for-the-badge&logo=python&logoColor=white](https://img.shields.io/badge/Seaborn-4C8CBF?style=for-the-badge&logo=python&logoColor=white)" alt="Seaborn"/>
 </div>
 
 <br>
@@ -24,21 +23,21 @@ Para manter a organização, o projeto foi dividido nas seguintes pastas:
 
 ## 📊 Principais Descobertas e Visualizações
 
-### 1. O Declínio do Jiu-Jitsu e a Ascensão das Decisões
+### O Declínio do Jiu-Jitsu e a Ascensão das Decisões
 Analisando os métodos de vitória desde 1993, fica evidente a padronização do esporte. As finalizações (Submissions), que dominavam os primórdios do UFC, sofreram uma queda brusca, dando lugar a combates mais equilibrados que terminam na decisão dos juízes.
 
 <div align="center">
   <img src="graphs/Grafico_Evolucao_Resultado_Era.png" width="800" alt="Evolução dos Resultados">
 </div>
 
-### 2. A Física Importa: Análise por Categoria de Peso
-Ao cruzar as eras históricas com os grupos de peso, provamos que a massa corporal dita o ritmo da luta. Na Era Moderna (ESPN), lutadores Peso-Leve vão para a decisão em **54.5%** das vezes. Em contrapartida, os Pesos-Pesados ainda entregam nocautes (KO/TKO) em **46.2%** de seus combates.
+### A Estabilização do Tempo de Luta (Boxplot)
+Através da análise de distribuição do tempo de octógono, podemos observar que a duração das lutas se tornou muito mais previsível. O esporte deixou de ter combates relâmpagos extremos para seguir um padrão tático onde os atletas cadenciam a luta até o limite de tempo.
 
 <div align="center">
-  <img src="graphs/evolucao_resultados_por_peso.png" width="900" alt="Resultados por Peso">
+  <img src="graphs/box_plot_tempo_medio_por_eras.png" width="800" alt="Tempo Médio por Era">
 </div>
 
-### 3. Correlações Táticas: O Mapa de Fadiga
+### Correlações Táticas: O Mapa de Fadiga
 O mapa de calor abaixo valida estatisticamente as dinâmicas do octógono usando a correlação de Pearson. Destaca-se a correlação negativa entre `Wrestling (Quedas/Min)` e `Volume de Golpes`. A matemática confirma que focar na luta agarrada reduz drasticamente a capacidade de trocação devido ao desgaste físico.
 
 <div align="center">
@@ -55,6 +54,16 @@ Como as lutas possuem durações variadas (desde nocautes em 10 segundos até de
 
 ## 🚀 Como Executar Localmente
 
-**1. Clone o repositório:**
 ```bash
-git clone [https://github.com/Ferthanks/ufc-data-analysis.git](https://github.com/Ferthanks/ufc-data-analysis.git)
+# Clone o repositório
+git clone https://github.com/Ferthanks/ufc-data-analysis.git
+
+# Navegue até a pasta do projeto
+cd ufc-data-analysis
+
+# Instale as dependências
+pip install -r requirements.txt
+
+# Execute os scripts
+cd scripts
+python heatmap.py
