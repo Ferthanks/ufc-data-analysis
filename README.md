@@ -1,0 +1,54 @@
+<div align="center">
+  <h1>🥊 Análise Exploratória e Evolução Tática do UFC</h1>
+  <p><i>Projeto acadêmico analisando como o maior evento de MMA do mundo evoluiu de uma "briga de estilos puros" para um esporte híbrido de altíssima performance.</i></p>
+
+  <!-- Badges Tecnológicos -->
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
+  <img src="https://img.shields.io/badge/Seaborn-4C8CBF?style=for-the-badge&logo=python&logoColor=white" alt="Seaborn"/>
+</div>
+
+<br>
+
+## 📌 Sobre o Projeto
+Este repositório contém o projeto final para a disciplina de **Análise Exploratória e Visualização de Dados**. Utilizando uma base de dados histórica do UFC (Ultimate Fighting Championship), aplicamos técnicas de limpeza, engenharia de atributos (Feature Engineering) e visualização estatística para descobrir padrões táticos ao longo das eras.
+
+## 📂 Estrutura do Repositório
+Para manter a organização, o projeto foi dividido nas seguintes pastas:
+
+* `data/`: Contém o dataset processado (`ufc_gold_dataset_final.csv`).
+* `scripts/`: Código-fonte em Python contendo a pipeline de limpeza e as gerações dos gráficos.
+* `graphs/`: Imagens em alta resolução geradas pelas análises.
+
+---
+
+## 📊 Principais Descobertas e Visualizações
+
+### 1. O Declínio do Jiu-Jitsu e a Ascensão das Decisões
+Analisando os métodos de vitória desde 1993, fica evidente a padronização do esporte. As finalizações (Submissions), que dominavam os primórdios do UFC, sofreram uma queda brusca, dando lugar a combates mais equilibrados que terminam na decisão dos juízes.
+
+<div align="center">
+  <img src="graphs/Grafico_Evolucao_Resultado_Era.png" width="800" alt="Evolução dos Resultados">
+</div>
+
+### 2. A Física Importa: Análise por Categoria de Peso
+Ao cruzar as eras históricas com os grupos de peso, provamos que a massa corporal dita o ritmo da luta. Na Era Moderna (ESPN), lutadores Peso-Leve vão para a decisão em **54.5%** das vezes. Em contrapartida, os Pesos-Pesados ainda entregam nocautes (KO/TKO) em **46.2%** de seus combates.
+
+<div align="center">
+  <img src="graphs/evolucao_resultados_por_peso.png" width="900" alt="Resultados por Peso">
+</div>
+
+### 3. Correlações Táticas: O Mapa de Fadiga
+O mapa de calor abaixo valida estatisticamente as dinâmicas do octógono usando a correlação de Pearson. Destaca-se a correlação negativa entre `Wrestling (Quedas/Min)` e `Volume de Golpes`. A matemática confirma que focar na luta agarrada reduz drasticamente a capacidade de trocação devido ao desgaste físico.
+
+<div align="center">
+  <img src="graphs/heatmap_correlacao.png" width="600" alt="Mapa de Calor de Correlação">
+</div>
+
+---
+
+## 🚀 Como Executar Localmente
+
+**1. Clone o repositório:**
+```bash
+git clone [https://github.com/Ferthanks/ufc-data-analysis.git](https://github.com/Ferthanks/ufc-data-analysis.git)
