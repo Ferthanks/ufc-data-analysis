@@ -37,8 +37,8 @@ Através da análise de distribuição do tempo de octógono, podemos observar q
   <img src="graphs/box_plot_tempo_medio_por_eras.png" width="800" alt="Tempo Médio por Era">
 </div>
 
-### Correlações Táticas: O Mapa de Fadiga
-O mapa de calor abaixo valida estatisticamente as dinâmicas do octógono usando a correlação de Pearson. Destaca-se a correlação negativa entre `Wrestling (Quedas/Min)` e `Volume de Golpes`. A matemática confirma que focar na luta agarrada reduz drasticamente a capacidade de trocação devido ao desgaste físico.
+### Correlações Táticas: O Mapa do Estilo de Luta
+O mapa de calor abaixo valida estatisticamente as dinâmicas do octógono usando a correlação de Pearson. O grande destaque é a correlação negativa de **-0.30** entre o **Tempo de Controle (Min)** e o **Volume de Golpes (Tentados/Min)**. Aliado ao fato de que o Wrestling possui uma correlação positiva de **0.30** com esse tempo de controle, a matemática dita a clara mudança tática: atletas que impõem o jogo agarrado conseguem neutralizar o ímpeto dos trocadores, derrubando drasticamente o volume de golpes tentados na luta através do abafamento e do domínio posicional.
 
 <div align="center">
   <img src="graphs/heatmap_correlacao.png" width="600" alt="Mapa de Calor de Correlação">
