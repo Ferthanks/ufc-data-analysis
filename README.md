@@ -47,6 +47,12 @@ O mapa de calor abaixo valida estatisticamente as dinâmicas do octógono usando
 
 ---
 
+## 🗄️ Fonte dos Dados e Metodologia
+A base de dados foi estruturada com informações históricas do UFC. O grande diferencial deste projeto foi a aplicação de **Engenharia de Atributos (Feature Engineering)**. 
+Como as lutas possuem durações variadas (desde nocautes em 10 segundos até decisões de 25 minutos), comparar volumes absolutos de golpes seria um erro estatístico. Para resolver isso, criamos métricas proporcionais, dividindo as ações pelo tempo de octógono, resultando em métricas justas de **"Ações Por Minuto"** (ex: *Quedas/Min*, *Golpes/Min*).
+
+---
+
 ## 🚀 Como Executar Localmente
 
 **1. Clone o repositório:**
