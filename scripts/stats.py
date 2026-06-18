@@ -34,7 +34,8 @@ def gerar_estatisticas_por_minuto():
     df_stats['TD_Att_Per_Min'] = df_stats['TD_Att'] / df_stats['Time']
     
     # Exportar tabela final calculada
-    df_stats.to_csv('ufc_stats_per_min.csv', index=False)
+    caminho_salvar = "data/ufc_stats_per_min.csv"
+    df_stats.to_csv(caminho_salvar, index=False)
     print("Arquivo 'ufc_stats_per_min.csv' gerado!")
     
     # Exibe um resumo no terminal para você validar os dados
