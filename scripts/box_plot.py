@@ -6,7 +6,7 @@ import seaborn as sns
 def plotar_distribuicao_tempo():
     try:
         # Puxa os dados limpos direto do arquivo processado
-        df_fights = pd.read_csv('ufc_fights_processed.csv')
+        df_fights = pd.read_csv('data/ufc_fights_processed.csv')
     except FileNotFoundError:
         from pipeline_dados import processar_dados_ufc
         df_fights = processar_dados_ufc()

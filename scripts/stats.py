@@ -5,7 +5,7 @@ import numpy as np
 def gerar_estatisticas_por_minuto():
     try:
         # Lê o arquivo que já possui as Eras processadas
-        df_fights = pd.read_csv('ufc_fights_processed.csv')
+        df_fights = pd.read_csv('data/ufc_fights_processed.csv')
     except FileNotFoundError:
         # Se você esquecer de rodar o pipeline antes, ele roda automaticamente
         from pipeline_dados import processar_dados_ufc

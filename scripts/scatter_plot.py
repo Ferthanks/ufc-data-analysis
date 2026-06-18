@@ -5,7 +5,7 @@ import seaborn as sns
 
 def plotar_dispersao_por_era():
     try:
-        df_stats = pd.read_csv('ufc_stats_per_min.csv')
+        df_stats = pd.read_csv('data/ufc_stats_per_min.csv')
     except FileNotFoundError:
         print("Erro: O arquivo 'ufc_stats_per_min.csv' não foi encontrado.")
         return

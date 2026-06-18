@@ -5,7 +5,7 @@ import seaborn as sns
 
 def plotar_evolucao_metodos():
     try:
-        df = pd.read_csv('ufc_fights_processed.csv')
+        df = pd.read_csv('data/ufc_fights_processed.csv')
     except FileNotFoundError:
         print("Erro: O arquivo 'ufc_fights_processed.csv' não foi encontrado.")
         return

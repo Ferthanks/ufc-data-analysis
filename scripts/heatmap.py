@@ -7,7 +7,7 @@ import seaborn as sns
 def plotar_heatmap_correlacao():
     try:
         # Lemos o arquivo bruto para extrair o tempo de controle (Ctrl_Sec) que não tínhamos nos outros
-        df = pd.read_csv('ufc_gold_dataset_final.csv')
+        df = pd.read_csv('data/ufc_gold_dataset_final.csv')
     except FileNotFoundError:
         print("Erro: O arquivo 'ufc_gold_dataset_final.csv' não foi encontrado.")
         return

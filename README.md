@@ -1,69 +1,86 @@
-<div align="center">
-  <h1>🥊 Análise Exploratória e Evolução Tática do UFC</h1>
-  <p><i>Projeto acadêmico analisando como o maior evento de MMA do mundo evoluiu de uma "briga de estilos puros" para um esporte híbrido de altíssima performance.</i></p>
+# 🥊 UFC Data Analytics: Engenharia de Dados e Evolução Tática do Octógono
 
-  <img src="[https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)" alt="Python"/>
-  <img src="[https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white](https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white)" alt="Pandas"/>
-  <img src="[https://img.shields.io/badge/Seaborn-4C8CBF?style=for-the-badge&logo=python&logoColor=white](https://img.shields.io/badge/Seaborn-4C8CBF?style=for-the-badge&logo=python&logoColor=white)" alt="Seaborn"/>
-</div>
+![Python](https://img.shields.io/badge/Python-3.11+-blue.svg?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
+![Seaborn](https://img.shields.io/badge/Seaborn-%234E79A7.svg?style=for-the-badge&logo=analytics&logoColor=white)
 
-<br>
+Este repositório sedia um projeto completo de Ciência de Dados e Análise Exploratória de Dados (EDA) aplicado ao histórico de lutas e atletas do **UFC (Ultimate Fighting Championship)**. 
 
-## 📌 Sobre o Projeto
-Este repositório contém o projeto final para a disciplina de **Análise Exploratória e Visualização de Dados**. Utilizando uma base de dados histórica do UFC (Ultimate Fighting Championship), aplicamos técnicas de limpeza, engenharia de atributos (Feature Engineering) e visualização estatística para descobrir padrões táticos ao longo das eras.
-
-## 📂 Estrutura do Repositório
-Para manter a organização, o projeto foi dividido nas seguintes pastas:
-
-* `data/`: Contém o dataset processado (`ufc_gold_dataset_final.csv`).
-* `scripts/`: Código-fonte em Python contendo a pipeline de limpeza e as gerações dos gráficos.
-* `graphs/`: Imagens em alta resolução geradas pelas análises.
+Através do cruzamento de dados biométricos, métricas de performance minuto a minuto e desfechos de combates, este estudo reconstrói a história da organização. O objetivo é provar matematicamente como a transição regulatória, os contratos de mídia e a ciência esportiva transformaram um show caótico de "briga de estilos" nos anos 90 em um esporte altamente estratégico, previsível e bilionário de alta performance.
 
 ---
 
-## 📊 Principais Descobertas e Visualizações
+## 🎯 Objetivos Estratégicos do Projeto
 
-### O Declínio do Jiu-Jitsu e a Ascensão das Decisões
-Analisando os métodos de vitória desde 1993, fica evidente a padronização do esporte. As finalizações (Submissions), que dominavam os primórdios do UFC, sofreram uma queda brusca, dando lugar a combates mais equilibrados que terminam na decisão dos juízes.
-
-<div align="center">
-  <img src="graphs/Grafico_Evolucao_Resultado_Era.png" width="800" alt="Evolução dos Resultados">
-</div>
-
-### A Estabilização do Tempo de Luta (Boxplot)
-Através da análise de distribuição do tempo de octógono, podemos observar que a duração das lutas se tornou muito mais previsível. O esporte deixou de ter combates relâmpagos extremos para seguir um padrão tático onde os atletas cadenciam a luta até o limite de tempo.
-
-<div align="center">
-  <img src="graphs/box_plot_tempo_medio_por_eras.png" width="800" alt="Tempo Médio por Era">
-</div>
-
-### Correlações Táticas: O Mapa do Estilo de Luta
-O mapa de calor abaixo valida estatisticamente as dinâmicas do octógono usando a correlação de Pearson. O grande destaque é a correlação negativa de **-0.30** entre o **Tempo de Controle (Min)** e o **Volume de Golpes (Tentados/Min)**. Aliado ao fato de que o Wrestling possui uma correlação positiva de **0.30** com esse tempo de controle, a matemática dita a clara mudança tática: atletas que impõem o jogo agarrado conseguem neutralizar o ímpeto dos trocadores, derrubando drasticamente o volume de golpes tentados na luta através do abafamento e do domínio posicional.
-
-<div align="center">
-  <img src="graphs/heatmap_correlacao.png" width="600" alt="Mapa de Calor de Correlação">
-</div>
+* **Mapeamento de Tendências Temporais:** Avaliar como as alterações nas regras unificadas impactaram o ritmo e a duração média das lutas.
+* **Validação de Hipóteses e Mitos do Esporte:** Testar estatisticamente se vantagens físicas natas (como alcance/envergadura e base canhota) superam fatores de carreira (como experiência e idade).
+* **Análise Multivariada de Performance:** Identificar correlações entre volume de golpes significativos lançados, eficiência de quedas (*takedowns*) e o método de vitória.
 
 ---
 
-## 🗄️ Fonte dos Dados e Metodologia
-A base de dados foi estruturada com informações históricas do UFC. O grande diferencial deste projeto foi a aplicação de **Engenharia de Atributos (Feature Engineering)**. 
-Como as lutas possuem durações variadas (desde nocautes em 10 segundos até decisões de 25 minutos), comparar volumes absolutos de golpes seria um erro estatístico. Para resolver isso, criamos métricas proporcionais, dividindo as ações pelo tempo de octógono, resultando em métricas justas de **"Ações Por Minuto"** (ex: *Quedas/Min*, *Golpes/Min*).
+## 🕒 O Framework Analítico: As 5 Eras Institucionais
+
+Para garantir o rigor estatístico das análises, os dados históricos foram segmentados e contextualizados em **5 Eras Macroeconômicas e Regulatórias**:
+
+1.  **No-Rules Era (1993 – 1997):** Período do "vale-tudo" original. Torneios sem divisões de peso, sem luvas obrigatórias, sem juízes laterais e sem limite de tempo. Foco absoluto no choque bruto de modalidades.
+2.  **Dark Ages Era (1997 – 2000):** Fase de forte boicote político e banimento dos grandes canais de Pay-Per-View. Para evitar a falência, o UFC adota rounds e categorias de peso iniciais buscando regulamentação.
+3.  **Zuffa Boom Era (2001 – 2010):** A compra da franquia pela Zuffa LLC (Dana White e irmãos Fertitta). Instituição das *Regras Unificadas do MMA*, explosão de vendas de PPV e lançamento do reality show *The Ultimate Fighter* (TUF).
+4.  **Fox & USADA Era (2011 – 2018):** Fase de massificação midiática na TV aberta dos EUA. Introdução de uniformização corporativa exclusiva (Reebok) e implementação do programa de testes antidoping ultra-rigoroso da USADA.
+5.  **Modern / ESPN Era (2019 – Presente):** Consolidação global via streaming com o grupo Disney/ESPN. Consolidação de eventos semanais, surgimento de centros de performance próprios (UFC PI) e atletas operando sob máxima preparação científica.
 
 ---
 
-## 🚀 Como Executar Localmente
+## 🏗️ Pipeline e Engenharia de Dados
+
+O projeto conta com uma arquitetura de dados estruturada sequencialmente em scripts independentes para garantir modularidade e reprodutibilidade:
+
+```text
+[Dados Brutos] ──> [pipeline_dados.py] ──> [merge_dados.py] ──> [Datasets Finais] ──> [Geração de Gráficos]
+
+PROJETO_UFC/
+│
+├── data/                                 # Datasets em diferentes estágios de processamento
+│   ├── ufc_fighters_final.csv            # Perfil biométrico limpo dos atletas
+│   ├── ufc_fights_merged_full.csv        # Tabela unificada (Lutas + Atletas) para análise
+│   ├── ufc_fights_processed.csv          # Histórico de combates estruturado
+│   ├── ufc_gold_dataset_final.csv        # Base consolidada de alta fidelidade
+│   └── ufc_stats_per_min.csv             # Estatísticas de performance normalizadas por tempo
+│
+├── graphs/                               # Diretório de saída das visualizações (PNG)
+│   ├── analise_stance.png                # Gráfico duplo de aproveitamento de bases
+│   ├── box_plot_tempo_medio_por_eras.png # Boxplot de duração das lutas
+│   ├── Evolucao_Categorias.png           # Linhas temporais de atividade de categorias
+│   ├── Grafico_dispersao_era_sig_min_... # Scatter plot de golpes significativos vs quedas
+│   ├── Grafico_Evolucao_Resultado_Era.png# Gráfico de barras de métodos de vitória por era
+│   ├── heatmap_correlaçao.png            # Matriz de correlação de Pearson das variáveis
+│   ├── idade_vs_experiencia_dark.png     # Gráfico duplo em Dark Mode (Transparente para Slides)
+│   ├── idade_vs_experiencia.png          # Versão padrão do gráfico duplo de longevidade
+│   └── mito_envergadura.png              # Gráfico de barras com a taxa de vitória do alcance
+│
+├── scripts/                              # Módulos em Python dedicados
+│   ├── analise_stance.py                 # Processa e plota dados de postura tática
+│   ├── box_plot.py                       # Gera a distribuição de tempo por eras
+│   ├── idade_experiencia.py              # Script principal do conflito biológico de atletas
+│   ├── merge_dados.py                    # Realiza o JOIN relacional das bases de dados
+│   ├── methods_plot.py                   # Abstração de funções estéticas do Matplotlib
+│   ├── mito_envergadura.py               # Calcula e isola a taxa de vitória por alcance
+│   ├── pipeline_dados.py                 # Pipeline de ETL e limpeza de strings
+│   ├── scatter_plot.py                   # Plota dispersões de performance por minuto
+│   ├── stats.py                          # Cálculos de correlação e geração do Heatmap
+│   └── weight_class_analysis.py          # Processa a evolução das divisões de peso
+│
+└── README.md                             # Documentação oficial do projeto
 
 ```bash
-# Clone o repositório
-git clone https://github.com/Ferthanks/ufc-data-analysis.git
+pip install pandas matplotlib seaborn numpy
 
-# Navegue até a pasta do projeto
-cd ufc-data-analysis
+# 1. Executar a pipeline de limpeza e unificação dos dados
+python scripts/pipeline_dados.py
+python scripts/merge_dados.py
 
-# Instale as dependências
-pip install -r requirements.txt
-
-# Execute os scripts
-cd scripts
-python heatmap.py
+# 2. Gerar as análises estatísticas e plots visuais
+python scripts/box_plot.py
+python scripts/mito_envergadura.py
+python scripts/idade_experiencia.py
+python scripts/analise_stance.py

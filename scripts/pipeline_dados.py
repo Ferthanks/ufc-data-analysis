@@ -5,7 +5,7 @@ def processar_dados_ufc():
     print("Iniciando o processamento dos dados do UFC...")
     
     # Carrega o arquivo original
-    df = pd.read_csv('ufc_gold_dataset_final.csv')
+    df = pd.read_csv('/data/ufc_gold_dataset_final.csv')
     
     # Corrige as datas e cria as Eras
     df["Event_Date"] = pd.to_datetime(df["Event_Date"])
